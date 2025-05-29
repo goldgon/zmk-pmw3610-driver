@@ -94,6 +94,23 @@ extern "C" {
 #define PMW3610_SVALUE_TO_CPI(svalue) ((uint32_t)(svalue).val1)
 #define PMW3610_SVALUE_TO_TIME(svalue) ((uint32_t)(svalue).val1)
 
+
+#ifdef CONFIG_PMW3610_INVERT_SCROLL_X
+#define PMW3610_SCROLL_X_NEGATIVE 1
+#define PMW3610_SCROLL_X_POSITIVE -1
+#else
+#define PMW3610_SCROLL_X_NEGATIVE -1
+#define PMW3610_SCROLL_X_POSITIVE 1
+#endif
+
+#ifdef CONFIG_PMW3610_INVERT_SCROLL_Y
+#define PMW3610_SCROLL_Y_NEGATIVE 1
+#define PMW3610_SCROLL_Y_POSITIVE -1
+#else
+#define PMW3610_SCROLL_Y_NEGATIVE -1
+#define PMW3610_SCROLL_Y_POSITIVE 1
+#endif
+
 /** @brief Sensor specific attributes of PMW3610. */
 enum pmw3610_attribute {
 
