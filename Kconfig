@@ -94,6 +94,15 @@ config PMW3610_REST3_SAMPLE_TIME_MS
     help
       Default REST2 mode sample period in millisecond.
 
+config PMW3610_INVERT_SCROLL_X
+  bool "Invert the X axis of the scroll"
+  default PMW3610_INVERT_X
+
+config PMW3610_INVERT_SCROLL_Y
+  bool "Invert the Y axis of the scroll"
+  default PMW3610_INVERT_Y
+
+
 module = PMW3610
 module-str = PMW3610
 source "${ZEPHYR_BASE}/subsys/logging/Kconfig.template.log_config"
